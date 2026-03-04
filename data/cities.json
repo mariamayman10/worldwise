@@ -1,0 +1,28 @@
+{
+  "cities": [
+    {
+      "id": "1ad6",
+      "cityName": "Marsa Maţruḩ",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2026-02-25T05:10:14.318Z",
+      "notes": "",
+      "position": {
+        "lat": "29.610677937241064",
+        "lng": "26.305475234985355"
+      }
+    },
+    {
+      "id": "47c4",
+      "cityName": "Mareil-en-France",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2026-02-25T05:10:31.926Z",
+      "notes": "",
+      "position": {
+        "lat": "49.06687870888645",
+        "lng": "2.4169921875000004"
+      }
+    }
+  ]
+}
