@@ -18,31 +18,22 @@ function Map() {
     getPosition,
   } = useGeolocation();
   const [mapLat, mapLng] = useUrlPosition();
-  // const mapPosition =
-  //   mapLat && mapLng
-  //     ? [mapLat, mapLng]
-  //     : geolocationPosition
-  //       ? [geolocationPosition.lat, geolocationPosition.lng]
-  //       : [40, 0];
 
-        const [mapPosition, setMapPosition] = useState([40, 0]);
-        useEffect(
-          function () {
-            if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
-          },
-          [mapLat, mapLng],
-        );
+  const [mapPosition, setMapPosition] = useState([40, 0]);
+  useEffect(
+    function () {
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
+    },
+    [mapLat, mapLng],
+  );
 
-        useEffect(
-          function () {
-            if (geolocationPosition)
-              setMapPosition([
-                geolocationPosition.lat,
-                geolocationPosition.lng,
-              ]);
-          },
-          [geolocationPosition],
-        );
+  useEffect(
+    function () {
+      if (geolocationPosition)
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+    },
+    [geolocationPosition],
+  );
 
   return (
     <div className={styles.mapContainer}>

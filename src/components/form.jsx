@@ -7,7 +7,7 @@ import Button from "./button";
 import BackButton from "./backButton";
 import Spinner from "./spinner";
 import Message from "./message";
-import styles from "./Form.module.css";
+import styles from "./form.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 

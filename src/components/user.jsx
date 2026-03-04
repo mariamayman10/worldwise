@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../features/auth/useAuth";
-import styles from "./User.module.css";
+import styles from "./user.module.css";
 
 function User() {
   const { user, logout } = useAuth();
