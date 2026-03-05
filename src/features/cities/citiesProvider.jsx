@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useReducer } from "react";
 import { CitiesContext } from "./citiesContext";
-const BASE_URL = "http://localhost:8000";
+const BASE_URL =
+  "https://my-json-server.typicode.com/mariamayman10/worldwise-server";
 
 const initialState = {
   cities: [],
@@ -54,19 +55,16 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  const getCity = useCallback(
-    async function getCity(id) {
-      try {
-        dispatch({ type: "loading" });
-        const res = await fetch(`${BASE_URL}/cities/${id}`);
-        const city = await res.json();
-        dispatch({ type: "cityFetched", payload: city });
-      } catch (error) {
-        console.error("Error fetching city:", error);
-      }
-    },
-    []
-  );
+  const getCity = useCallback(async function getCity(id) {
+    try {
+      dispatch({ type: "loading" });
+      const res = await fetch(`${BASE_URL}/cities/${id}`);
+      const city = await res.json();
+      dispatch({ type: "cityFetched", payload: city });
+    } catch (error) {
+      console.error("Error fetching city:", error);
+    }
+  }, []);
 
   async function createCity(city) {
     dispatch({ type: "loading" });

@@ -7,8 +7,8 @@ import styles from "./login.module.css";
 import SpinnerFullPage from "../components/spinnerFull";
 function Login() {
   const { isAuth, loginFailed, authenticating, login } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("mariam@gmail.com");
+  const [password, setPassword] = useState("mariam");
   const navigate = useNavigate();
 
   useEffect(() => {
